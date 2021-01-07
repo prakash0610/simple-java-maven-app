@@ -4,6 +4,7 @@ pipeline {
     // }
 
     agent {
+        image 'maven:alpine-test'
         label 'docker'
     }
 
