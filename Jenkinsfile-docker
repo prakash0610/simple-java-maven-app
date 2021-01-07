@@ -5,9 +5,7 @@ pipeline {
 
     agent {
         label 'docker'
-        docker {
-            image 'maven:alpine-test'
-        }   
+        image 'maven:alpine-test'  
     }
 
     stages {
