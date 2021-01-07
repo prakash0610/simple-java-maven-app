@@ -4,8 +4,10 @@ pipeline {
     // }
 
     agent {
-        image 'maven:alpine-test'
-        label 'docker'
+        docker {
+            image 'maven:alpine-test'
+            label 'docker'
+        }
     }
 
     stages {
