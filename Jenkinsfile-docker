@@ -4,7 +4,6 @@ pipeline {
     // }
 
     agent {
-        node {label 'dockernode'}
         docker {
             image 'maven:alpine-test'
             label 'dockernode'
