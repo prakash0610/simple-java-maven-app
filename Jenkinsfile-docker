@@ -4,25 +4,20 @@ pipeline {
     // }
 
     agent {
-         node {
-         label 'docker'
-      }
+        docker {
+            image 'maven:alpine-test'
+            label 'dockernode'
+        }
     }
 
     stages {
         stage('Checkout') {
-            agent {
-                docker { image 'maven:alpine-test'}
-            }
             steps{
                 checkout scm
             }
 
         }
         stage('Build') {
-            agent {
-                docker { image 'maven:alpine-test'}
-            }
             steps{
                 sh "mvn clean install"
             }
