@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Post tasks'){
       steps {
-        sh "echo send an email"
+        sh "echo sending an email"
       }
     }
   }
