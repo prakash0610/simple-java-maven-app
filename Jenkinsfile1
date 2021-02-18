@@ -26,7 +26,8 @@ pipeline {
         junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
       }
     }
-    post {
+  }
+  post {
       always {
         deleteDir()
       }
@@ -37,5 +38,4 @@ pipeline {
         echo "The job is successfull"
       }
     }
-  }
 }
