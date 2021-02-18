@@ -63,7 +63,7 @@ pipeline {
     stage('Deploy to UAT'){
       environment {
         target_user = "ec2-user"
-        target-server = ""
+        target_server = ""
       }
       steps {
         echo "awating"
