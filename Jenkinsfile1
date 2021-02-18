@@ -38,7 +38,7 @@ pipeline {
             target_server= "172.31.26.103"
           }
            steps {
-            echo "Deploying to dev environment"
+            echo "Deploying to dev environment1"
             sshagent(['maven-cd-key']) {
               sh "scp -o StrictHostKeyChecking=no target/my-app-1.0-SNAPSHOT.jar $target_user@$target_server:/home/ec2-user"
             }
@@ -51,7 +51,7 @@ pipeline {
             target_server= "172.31.28.146"
           }
            steps {
-            echo "Deploying to dev environment"
+            echo "Deploying to dev environment2"
             sshagent(['maven-cd-key']) {
               sh "scp -o StrictHostKeyChecking=no target/my-app-1.0-SNAPSHOT.jar $target_user@$target_server:/home/ec2-user"
             }
